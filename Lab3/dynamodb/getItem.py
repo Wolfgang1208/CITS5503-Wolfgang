@@ -1,5 +1,6 @@
 import boto3
-
+import sys, getopt
+options, args = getopt.getopt(sys.argv[1:], 'hp:u:', ['userid=','filename='])
 # Get the service resource.
 dynamodb = boto3.resource('dynamodb')
 
@@ -15,21 +16,22 @@ table = dynamodb.Table('AWSFiles')
 # values will be set based on the response.
 print(table.creation_date_time)
 
-import json
-import sys, getopt
-options, args = getopt.getopt(sys.argv[1:], 'hp:f:', ['filename='])
-
+userid = ""
 filename = ""
 
 for name, value in options:
         if name in ('-f', '--filename'):
             filename = value
             print(filename)
+        if name in ('-u', '--userid'):
+            userid = value
+            print(userid)
 
-with open(filename) as file_object:
-    data = json.load(file_object)
-print(data)
-
-table.put_item(
-   Item=data
+response = table.get_item(
+    Key={
+        'userId': userid,
+        'filename': filename
+    }
 )
+item = response['Item']
+print(item)

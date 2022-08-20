@@ -5,14 +5,14 @@ dynamodb = boto3.resource('dynamodb')
 
 # Create the DynamoDB table.
 table = dynamodb.create_table(
-    TableName='AWSCloudFiles',
+    TableName='AWSFiles',
     KeySchema=[
         {
             'AttributeName': 'userId',
             'KeyType': 'HASH'
         },
         {
-            'AttributeName': 'owner',
+            'AttributeName': 'filename',
             'KeyType': 'RANGE'
         }
     ],
@@ -22,7 +22,7 @@ table = dynamodb.create_table(
             'AttributeType': 'S'
         },
         {
-            'AttributeName': 'owner',
+            'AttributeName': 'filename',
             'AttributeType': 'S'
         },
     ],
