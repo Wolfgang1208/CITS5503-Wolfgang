@@ -1,0 +1,21 @@
+{
+    "TableName": "CloudFile",
+    "userId": {
+        "S": "22951266-cloudstorage"
+    },
+    "filename": {
+        "S": "subfile.txt"
+    },
+    "path": {
+        "S": "./rootdir/subdir"
+    },
+    "lastUpdated": {
+        "S": "2022-08-18 04:57:28+00:00"
+    },
+    "owner": {
+        "S": "mdanwarulkaium.patwary"
+    },
+    "permission": {
+        "S": "FULL_CONTROL"
+    }
+}
