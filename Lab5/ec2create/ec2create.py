@@ -26,4 +26,3 @@ def createInstances(az):
 
 instance1 = createInstances(az_1)
 instance2 = createInstances(az_2)
-

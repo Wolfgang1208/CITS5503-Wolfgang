@@ -18,4 +18,4 @@ def describe_ec2():
             print(instances['Instances'][0]['SubnetId'])
 
 
-        
+describe_ec2()
