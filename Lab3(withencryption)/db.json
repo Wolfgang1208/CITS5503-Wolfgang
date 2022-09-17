@@ -1,0 +1,22 @@
+{
+    "TableName": "CloudFile",
+    "AttributeDefinitions":[
+        {"AttributeName":"userId"            ,"AttributeType":"S"},
+        {"AttributeName":"fileName"          ,"AttributeType":"S"},
+        {"AttributeName":"path"              ,"AttributeType":"S"},
+        {"AttributeName":"lastUpdated"       ,"AttributeType":"S"},
+        {"AttributeName":"owner"             ,"AttributeType":"S"},
+        {"AttributeName":"permissions"       ,"AttributeType":"S"}
+    ],
+    "KeySchema":[
+        {"AttributeName":"userId"            ,"KeyType":"RANGE"},
+        {"AttributeName":"fileName"          ,"KeyType":"HASH"},
+        {"AttributeName":"path"              ,"KeyType":"HASH"},
+        {"AttributeName":"lastUpdated"       ,"KeyType":"HASH"},
+        {"AttributeName":"owner"             ,"KeyType":"HASH"},
+        {"AttributeName":"permissions"       ,"KeyType":"HASH"}
+    ],
+    "ProvisionedThroughput":{
+        "ReadCapacityUnits":5,"WriteCapacityUnits":5
+    }
+}
