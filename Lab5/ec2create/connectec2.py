@@ -6,16 +6,19 @@ def describe_ec2():
 
 
     res = instances["Reservations"]
-    i = 0
+    #print(res)
+    i = 1
     for instances in res:
         x = instances['Instances'][0]['KeyName']
         if x == "22951266-key":
-            i+=1
-            #print(instances['Instances'][0])
-            print(f"Instance{i}: ")
-            print(instances['Instances'][0]['PublicIpAddress'])
-            print(instances['Instances'][0]['VpcId'])
-            print(instances['Instances'][0]['SubnetId'])
+            if 'PublicIpAddress' in instances['Instances'][0]:
+                #print(instances['Instances'][0])
+                print("---------------------")
+                print(f"Instance{i}: ")
+                print(instances['Instances'][0]['PublicIpAddress'])
+                print(instances['Instances'][0]['VpcId'])
+                print(instances['Instances'][0]['SubnetId'])
+                i+=1
 
 
 describe_ec2()
