@@ -15,10 +15,11 @@ def describe_ec2():
                 #print(instances['Instances'][0])
                 print("---------------------")
                 print(f"Instance{i}: ")
-                print(instances['Instances'][0]['PublicIpAddress'])
-                print(instances['Instances'][0]['VpcId'])
-                print(instances['Instances'][0]['SubnetId'])
+                print(f"Instanceid: {instances['Instances'][0]['InstanceId']}")
+                print(f"Public ip: {instances['Instances'][0]['PublicIpAddress']}")
+                print(f"Vpc id: {instances['Instances'][0]['VpcId']}")
+                print(f"Subnet id: {instances['Instances'][0]['SubnetId']}")
+                print(f"Placement: {instances['Instances'][0]['Placement']['AvailabilityZone']}")
                 i+=1
-
 
 describe_ec2()

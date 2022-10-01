@@ -6,6 +6,7 @@ aws_region = 'ap-southeast-2'
 
 az_1 = 'ap-southeast-2a'
 az_2 = 'ap-southeast-2b'
+az_3 = 'ap-southeast-2c'
 
 ami_id = 'ami-d38a4ab1'
 
@@ -24,5 +25,6 @@ def createInstances(az):
     Placement = {'AvailabilityZone':az})
     return instance
 
-instance1 = createInstances(az_1)
-instance2 = createInstances(az_2)
+#instance1 = createInstances(az_1)
+#instance2 = createInstances(az_2)
+#instance3 = createInstances(az_3)

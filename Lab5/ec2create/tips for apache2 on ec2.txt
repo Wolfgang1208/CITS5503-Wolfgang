@@ -1,0 +1,233 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#You need to do something before installing apache2 on an ec2 instance#
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+wolfgang@wolfgang-VirtualBox:~/Desktop$ cd ~
+wolfgang@wolfgang-VirtualBox:~$ cd ~/.ssh
+wolfgang@wolfgang-VirtualBox:~/.ssh$ sudo ssh -i 22951266-key.pem 3.25.151.212
+[sudo] password for wolfgang: 
+The authenticity of host '3.25.151.212 (3.25.151.212)' can't be established.
+ECDSA key fingerprint is SHA256:Y5dY5mV19Yda5jpPERHorA2b/isLetuPnTp6A4numFA.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '3.25.151.212' (ECDSA) to the list of known hosts.
+Please login as the user "ubuntu" rather than the user "root".
+
+Connection to 3.25.151.212 closed.
+wolfgang@wolfgang-VirtualBox:~/.ssh$ sudo ssh -i 22951266-key.pem 3.25.151.212
+Please login as the user "ubuntu" rather than the user "root".
+
+^[[A^[[B^[[A^[[A^[[A^[[B^CConnection to 3.25.151.212 closed.
+wolfgang@wolfgang-VirtualBox:~/.ssh$ sudo ssh -i 22951266-key.pem ubuntu@3.25.151.212
+Welcome to Ubuntu 16.04.4 LTS (GNU/Linux 4.4.0-1052-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+0 packages can be updated.
+0 updates are security updates.
+
+New release '18.04.6 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+ubuntu@ip-172-31-47-209:~$ sudo apt update 
+Hit:1 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial InRelease
+Get:2 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial-updates InRelease [99.8 kB]
+Get:3 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial-backports InRelease [97.4 kB]
+Get:4 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial/main Sources [868 kB]
+Get:5 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial/restricted Sources [4,808 B]
+Get:6 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial/universe Sources [7,728 kB]
+Get:7 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial/multiverse Sources [179 kB]
+Get:8 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial/universe amd64 Packages [7,532 kB]
+Get:9 http://security.ubuntu.com/ubuntu xenial-security InRelease [99.8 kB]    
+Get:10 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial/universe Translation-en [4,354 kB]
+Get:11 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial/multiverse amd64 Packages [144 kB]
+Get:12 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial/multiverse Translation-en [106 kB]
+Get:13 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main Sources [537 kB]
+Get:14 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/restricted Sources [3,608 B]
+Get:15 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/universe Sources [444 kB]
+Get:16 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/multiverse Sources [12.3 kB]
+Get:17 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [2,049 kB]
+Get:18 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main Translation-en [461 kB]
+Get:19 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/restricted amd64 Packages [10.2 kB]
+Get:20 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/restricted Translation-en [2,272 B]
+Get:21 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [1,219 kB]
+Get:22 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/universe Translation-en [358 kB]
+Get:23 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 Packages [22.6 kB]
+Get:24 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/multiverse Translation-en [8,476 B]
+Get:25 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial-backports/main Sources [6,720 B]
+Get:26 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial-backports/universe Sources [11.0 kB]
+Get:27 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial-backports/main amd64 Packages [9,812 B]
+Get:28 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial-backports/main Translation-en [4,456 B]
+Get:29 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial-backports/universe amd64 Packages [11.3 kB]
+Get:30 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial-backports/universe Translation-en [4,476 B]
+Get:31 http://security.ubuntu.com/ubuntu xenial-security/main Sources [251 kB] 
+Get:32 http://security.ubuntu.com/ubuntu xenial-security/restricted Sources [2,976 B]
+Get:33 http://security.ubuntu.com/ubuntu xenial-security/universe Sources [211 kB]
+Get:34 http://security.ubuntu.com/ubuntu xenial-security/multiverse Sources [4,636 B]
+Get:35 http://security.ubuntu.com/ubuntu xenial-security/main amd64 Packages [1,648 kB]
+Get:36 http://security.ubuntu.com/ubuntu xenial-security/main Translation-en [360 kB]
+Get:37 http://security.ubuntu.com/ubuntu xenial-security/restricted amd64 Packages [9,824 B]
+Get:38 http://security.ubuntu.com/ubuntu xenial-security/restricted Translation-en [2,152 B]
+Get:39 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 Packages [785 kB]
+Get:40 http://security.ubuntu.com/ubuntu xenial-security/universe Translation-en [225 kB]
+Get:41 http://security.ubuntu.com/ubuntu xenial-security/multiverse amd64 Packages [7,864 B]
+Get:42 http://security.ubuntu.com/ubuntu xenial-security/multiverse Translation-en [2,672 B]
+Fetched 29.9 MB in 6s (4,762 kB/s)                                             
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+221 packages can be upgraded. Run 'apt list --upgradable' to see them.
+ubuntu@ip-172-31-47-209:~$ sudo apt install apache2 -y
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  apache2-bin apache2-data apache2-utils libapr1 libaprutil1
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap liblua5.1-0 ssl-cert
+Suggested packages:
+  www-browser apache2-doc apache2-suexec-pristine | apache2-suexec-custom
+  openssl-blacklist
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils libapr1 libaprutil1
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap liblua5.1-0 ssl-cert
+0 upgraded, 10 newly installed, 0 to remove and 221 not upgraded.
+Need to get 1,559 kB of archives.
+After this operation, 6,448 kB of additional disk space will be used.
+Get:1 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libapr1 amd64 1.5.2-3 [86.0 kB]
+Get:2 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libaprutil1 amd64 1.5.4-1build1 [77.1 kB]
+Get:3 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libaprutil1-dbd-sqlite3 amd64 1.5.4-1build1 [10.6 kB]
+Get:4 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 libaprutil1-ldap amd64 1.5.4-1build1 [8,720 B]
+Get:5 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 liblua5.1-0 amd64 5.1.5-8ubuntu1 [102 kB]
+Get:6 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 apache2-bin amd64 2.4.18-2ubuntu3.17 [927 kB]
+Get:7 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 apache2-utils amd64 2.4.18-2ubuntu3.17 [81.9 kB]
+Get:8 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 apache2-data all 2.4.18-2ubuntu3.17 [162 kB]
+Get:9 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial-updates/main amd64 apache2 amd64 2.4.18-2ubuntu3.17 [86.8 kB]
+Get:10 http://ap-southeast-2.ec2.archive.ubuntu.com/ubuntu xenial/main amd64 ssl-cert all 1.0.37 [16.9 kB]
+Fetched 1,559 kB in 0s (23.3 MB/s)
+Preconfiguring packages ...
+Selecting previously unselected package libapr1:amd64.
+(Reading database ... 51142 files and directories currently installed.)
+Preparing to unpack .../libapr1_1.5.2-3_amd64.deb ...
+Unpacking libapr1:amd64 (1.5.2-3) ...
+Selecting previously unselected package libaprutil1:amd64.
+Preparing to unpack .../libaprutil1_1.5.4-1build1_amd64.deb ...
+Unpacking libaprutil1:amd64 (1.5.4-1build1) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../libaprutil1-dbd-sqlite3_1.5.4-1build1_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.5.4-1build1) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../libaprutil1-ldap_1.5.4-1build1_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.5.4-1build1) ...
+Selecting previously unselected package liblua5.1-0:amd64.
+Preparing to unpack .../liblua5.1-0_5.1.5-8ubuntu1_amd64.deb ...
+Unpacking liblua5.1-0:amd64 (5.1.5-8ubuntu1) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../apache2-bin_2.4.18-2ubuntu3.17_amd64.deb ...
+Unpacking apache2-bin (2.4.18-2ubuntu3.17) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../apache2-utils_2.4.18-2ubuntu3.17_amd64.deb ...
+Unpacking apache2-utils (2.4.18-2ubuntu3.17) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../apache2-data_2.4.18-2ubuntu3.17_all.deb ...
+Unpacking apache2-data (2.4.18-2ubuntu3.17) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../apache2_2.4.18-2ubuntu3.17_amd64.deb ...
+Unpacking apache2 (2.4.18-2ubuntu3.17) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../ssl-cert_1.0.37_all.deb ...
+Unpacking ssl-cert (1.0.37) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Processing triggers for man-db (2.7.5-1) ...
+Processing triggers for ufw (0.35-0ubuntu2) ...
+Processing triggers for systemd (229-4ubuntu21.1) ...
+Processing triggers for ureadahead (0.100.0-19) ...
+Setting up libapr1:amd64 (1.5.2-3) ...
+Setting up libaprutil1:amd64 (1.5.4-1build1) ...
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.5.4-1build1) ...
+Setting up libaprutil1-ldap:amd64 (1.5.4-1build1) ...
+Setting up liblua5.1-0:amd64 (5.1.5-8ubuntu1) ...
+Setting up apache2-bin (2.4.18-2ubuntu3.17) ...
+Setting up apache2-utils (2.4.18-2ubuntu3.17) ...
+Setting up apache2-data (2.4.18-2ubuntu3.17) ...
+Setting up apache2 (2.4.18-2ubuntu3.17) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+Setting up ssl-cert (1.0.37) ...
+Processing triggers for libc-bin (2.23-0ubuntu10) ...
+Processing triggers for systemd (229-4ubuntu21.1) ...
+Processing triggers for ureadahead (0.100.0-19) ...
+Processing triggers for ufw (0.35-0ubuntu2) ...
+ubuntu@ip-172-31-47-209:~$ apache2 -version
+Server version: Apache/2.4.18 (Ubuntu)
+Server built:   2020-08-12T21:35:50
+ubuntu@ip-172-31-47-209:~$ sudo systemctl status apache2
+● apache2.service - LSB: Apache2 web server
+   Loaded: loaded (/etc/init.d/apache2; bad; vendor preset: enabled)
+  Drop-In: /lib/systemd/system/apache2.service.d
+           └─apache2-systemd.conf
+   Active: active (running) since Sun 2022-09-18 06:11:34 UTC; 56s ago
+     Docs: man:systemd-sysv-generator(8)
+   CGroup: /system.slice/apache2.service
+           ├─12160 /usr/sbin/apache2 -k start
+           ├─12163 /usr/sbin/apache2 -k start
+           └─12164 /usr/sbin/apache2 -k start
+
+Sep 18 06:11:33 ip-172-31-47-209 systemd[1]: Starting LSB: Apache2 web server...
+Sep 18 06:11:33 ip-172-31-47-209 apache2[12136]:  * Starting Apache httpd web se
+Sep 18 06:11:34 ip-172-31-47-209 apache2[12136]:  *
+Sep 18 06:11:34 ip-172-31-47-209 systemd[1]: Started LSB: Apache2 web server.
+lines 1-15/15 (END)
+ubuntu@ip-172-31-47-209:~$ ll
+total 28
+drwxr-xr-x 4 ubuntu ubuntu 4096 Sep 18 06:11 ./
+drwxr-xr-x 3 root   root   4096 Sep 18 05:51 ../
+-rw-r--r-- 1 ubuntu ubuntu  220 Aug 31  2015 .bash_logout
+-rw-r--r-- 1 ubuntu ubuntu 3771 Aug 31  2015 .bashrc
+drwx------ 2 ubuntu ubuntu 4096 Sep 18 06:09 .cache/
+-rw-r--r-- 1 ubuntu ubuntu  655 May 16  2017 .profile
+drwx------ 2 ubuntu ubuntu 4096 Sep 18 05:51 .ssh/
+-rw-r--r-- 1 ubuntu ubuntu    0 Sep 18 06:11 .sudo_as_admin_successful
+ubuntu@ip-172-31-47-209:~$ sudo su
+root@ip-172-31-47-209:/home/ubuntu# echo "Hello World from $(hostname -f)" > /var/www/html/index.html
+root@ip-172-31-47-209:/home/ubuntu# 
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#You need to do something before installing apache2 on an ec2 instance#
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
