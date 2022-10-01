@@ -25,6 +25,6 @@ def createInstances(az):
     Placement = {'AvailabilityZone':az})
     return instance
 
-#instance1 = createInstances(az_1)
-#instance2 = createInstances(az_2)
-#instance3 = createInstances(az_3)
+instance1 = createInstances(az_1)
+""" instance2 = createInstances(az_2)
+instance3 = createInstances(az_3) """
