@@ -1,0 +1,121 @@
+{'Labels': [
+        {'Name': 'Grass', 'Confidence': 99.93463897705078, 'Instances': [], 'Parents': [
+                {'Name': 'Plant'
+                }
+            ]
+        },
+        {'Name': 'Plant', 'Confidence': 99.93463897705078, 'Instances': [], 'Parents': []
+        },
+        {'Name': 'City', 'Confidence': 98.75751495361328, 'Instances': [], 'Parents': [
+                {'Name': 'Urban'
+                },
+                {'Name': 'Building'
+                }
+            ]
+        },
+        {'Name': 'Town', 'Confidence': 98.75751495361328, 'Instances': [], 'Parents': [
+                {'Name': 'Urban'
+                },
+                {'Name': 'Building'
+                }
+            ]
+        },
+        {'Name': 'Urban', 'Confidence': 98.75751495361328, 'Instances': [], 'Parents': []
+        },
+        {'Name': 'Building', 'Confidence': 98.75751495361328, 'Instances': [], 'Parents': []
+        },
+        {'Name': 'High Rise', 'Confidence': 98.16545867919922, 'Instances': [], 'Parents': [
+                {'Name': 'City'
+                },
+                {'Name': 'Urban'
+                },
+                {'Name': 'Building'
+                }
+            ]
+        },
+        {'Name': 'Downtown', 'Confidence': 94.06089782714844, 'Instances': [], 'Parents': [
+                {'Name': 'City'
+                },
+                {'Name': 'Urban'
+                },
+                {'Name': 'Building'
+                }
+            ]
+        },
+        {'Name': 'Lawn', 'Confidence': 92.40365600585938, 'Instances': [], 'Parents': [
+                {'Name': 'Grass'
+                },
+                {'Name': 'Plant'
+                }
+            ]
+        },
+        {'Name': 'Metropolis', 'Confidence': 87.90911102294922, 'Instances': [], 'Parents': [
+                {'Name': 'City'
+                },
+                {'Name': 'Urban'
+                },
+                {'Name': 'Building'
+                }
+            ]
+        },
+        {'Name': 'Park', 'Confidence': 86.65204620361328, 'Instances': [], 'Parents': [
+                {'Name': 'Lawn'
+                },
+                {'Name': 'Outdoors'
+                },
+                {'Name': 'Grass'
+                },
+                {'Name': 'Plant'
+                }
+            ]
+        },
+        {'Name': 'Outdoors', 'Confidence': 86.65204620361328, 'Instances': [], 'Parents': []
+        },
+        {'Name': 'Office Building', 'Confidence': 80.65716552734375, 'Instances': [], 'Parents': [
+                {'Name': 'Building'
+                }
+            ]
+        },
+        {'Name': 'Architecture', 'Confidence': 69.9772720336914, 'Instances': [], 'Parents': [
+                {'Name': 'Building'
+                }
+            ]
+        },
+        {'Name': 'Neighborhood', 'Confidence': 59.93781280517578, 'Instances': [], 'Parents': [
+                {'Name': 'Urban'
+                },
+                {'Name': 'Building'
+                }
+            ]
+        },
+        {'Name': 'Apartment Building', 'Confidence': 59.099849700927734, 'Instances': [], 'Parents': [
+                {'Name': 'High Rise'
+                },
+                {'Name': 'City'
+                },
+                {'Name': 'Urban'
+                },
+                {'Name': 'Building'
+                }
+            ]
+        },
+        {'Name': 'Field', 'Confidence': 57.41236877441406, 'Instances': [], 'Parents': []
+        },
+        {'Name': 'Skyscraper', 'Confidence': 55.44181823730469, 'Instances': [], 'Parents': [
+                {'Name': 'High Rise'
+                },
+                {'Name': 'Architecture'
+                },
+                {'Name': 'City'
+                },
+                {'Name': 'Building'
+                },
+                {'Name': 'Urban'
+                }
+            ]
+        }
+    ], 'LabelModelVersion': '2.0', 'ResponseMetadata': {'RequestId': 'ca50b404-e8c2-4f0d-8388-16d7de6ae9a9', 'HTTPStatusCode': 200, 'HTTPHeaders': {'x-amzn-requestid': 'ca50b404-e8c2-4f0d-8388-16d7de6ae9a9', 'content-type': 'application/x-amz-json-1.1', 'content-length': '2052', 'date': 'Thu,
+            13 Oct 2022 17: 31: 49 GMT'
+        }, 'RetryAttempts': 0
+    }
+}
